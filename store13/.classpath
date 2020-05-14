@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/junit-3.8.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/servlet-api.jar" sourcepath="C:/Users/saker/apache-tomcat-6.0.14/lib"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-test.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-webmvc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

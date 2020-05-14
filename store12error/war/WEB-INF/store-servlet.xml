@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <!-- the application context definition for the store DispatcherServlet -->
+  
+  <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    <property name="basename" value="messages"/>
+  </bean>
+  
+  <bean name="/hello.htm" class="store.web.HelloController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/teeshirtmen.htm" class="store.web.TeeshirtmenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/teeshirtwomen.htm" class="store.web.TeeshirtwomenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/trousermen.htm" class="store.web.TrousermenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/trouserwomen.htm" class="store.web.TrouserwomenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/hatmen.htm" class="store.web.HatmenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/hatwomen.htm" class="store.web.HatwomenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/shoemen.htm" class="store.web.ShoemenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/shoewomen.htm" class="store.web.ShoewomenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/accessorymen.htm" class="store.web.AccessorymenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/accessorywomen.htm" class="store.web.AccessorywomenController">
+    <property name="productManager" ref="productManager"/>
+  </bean>
+  
+  <bean name="/viewcart.htm" class="store.web.ViewcartController">
+    <property name="itemManager" ref="itemManager"/>
+  </bean>
+  
+  <bean name="/checkout.htm" class="store.web.CheckoutController">
+    <property name="itemManager" ref="itemManager"/>
+  </bean>
+  
+  <bean name="/billing.htm" class="store.web.BillingController">
+    <property name="itemManager" ref="itemManager"/>
+  </bean>
+  
+  <bean name="/shipping.htm" class="store.web.ShippingController">
+    <property name="successView" value="billing1"/>
+    <property name="itemManager" ref="itemManager"/>
+  </bean>
+  
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+    <property name="prefix" value="/WEB-INF/jsp/"></property>
+    <property name="suffix" value=".jsp"></property>
+  </bean>
+  
+</beans>  

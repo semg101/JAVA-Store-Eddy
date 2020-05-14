@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <!-- the application context definition for the store DispatcherServlet -->
+
+
+  <bean name="/hello.htm" class="store.web.HelloController"/>
+  
+  <bean name="/teeshirtmen.htm" class="store.web.TeeshirtmenController"/>
+  
+  <bean name="/teeshirtwomen.htm" class="store.web.TeeshirtwomenController"/>
+  
+  <bean name="/trousermen.htm" class="store.web.TrousermenController"/>
+  
+  <bean name="/trouserwomen.htm" class="store.web.TrouserwomenController"/>
+  
+  <bean name="/hatmen.htm" class="store.web.HatmenController"/>
+  
+  <bean name="/hatwomen.htm" class="store.web.HatwomenController"/>
+  
+  <bean name="/shoemen.htm" class="store.web.ShoemenController"/>
+  
+  <bean name="/shoewomen.htm" class="store.web.ShoewomenController"/>
+  
+  <bean name="/accessorymen.htm" class="store.web.AccessorymenController"/>
+  
+  <bean name="/accessorywomen.htm" class="store.web.AccessorywomenController"/>
+  
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+    <property name="prefix" value="/WEB-INF/jsp/"></property>
+    <property name="suffix" value=".jsp"></property>
+  </bean>
+  
+</beans>  
